@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavani Landing Page</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f5f5;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      background:#111;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo h1{
+      color:white;
+      font-size:32px;
+    }
+
+    .logo p{
+      color:#ccc;
+      font-size:14px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00bfff;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      width:100%;
+      height:100vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)),
+      url('Pavani1.jpg');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+
+      padding:0 8%;
+    }
+
+    .hero-text{
+      max-width:650px;
+      color:white;
+    }
+
+    .hero-text h2{
+      font-size:70px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .hero-text p{
+      font-size:22px;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      background:#00bfff;
+      color:white;
+      padding:15px 35px;
+      border-radius:8px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0095cc;
+      transform:scale(1.05);
+    }
+
+    /* COMMON SECTION */
+
+    section{
+      padding:100px 8%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:45px;
+      margin-bottom:50px;
+      color:#111;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:white;
+    }
+
+    .about-container{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .about-img{
+      flex:1;
+      min-width:300px;
+    }
+
+    .about-img img{
+      width:380px;
+      height:500px;
+      object-fit:cover;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .about-text{
+      flex:1;
+      min-width:300px;
+      max-width:650px;
+    }
+
+    .about-text h3{
+      font-size:35px;
+      margin-bottom:20px;
+      color:#111;
+    }
+
+    .about-text p{
+      font-size:18px;
+      line-height:1.9;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    /* CARDS */
+
+    .box-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      padding:40px 25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      color:#00bfff;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      color:#555;
+      line-height:1.7;
+      font-size:17px;
+    }
+
+    /* SERVICES */
+
+    .services{
+      background:#f0f4f8;
+    }
+
+    /* SKILLS */
+
+    .skills{
+      background:white;
+    }
+
+    /* PROJECTS */
+
+    .projects{
+      background:#f0f4f8;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:white;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:25px;
+      font-size:15px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-text h2{
+        font-size:45px;
+      }
+
+      .hero-text p{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      <h1>Pavani Landing Page</h1>
+      <p>Creative Web Design</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- HOME -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h2>Pavani Web Developer</h2>
+
+      <p>
+        I am passionate about creating responsive and attractive
+        websites using HTML and CSS with modern user-friendly designs.
+      </p>
+
+      <a href="#" class="btn">Hire Me</a>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about-container">
+
+      <div class="about-img">
+        <img src="pavani1.jpg" alt="Pavani Image">
+      </div>
+
+      <div class="about-text">
+       <h3>Frontend Developer</h3>
+
+<p>
+  I am Pavani, a beginner frontend developer with knowledge of
+  HTML and CSS. I am passionate about designing modern,
+  responsive, and user-friendly websites.
+</p>
+
+<p>
+  I enjoy creating attractive landing pages, clean layouts,
+  and interactive web interfaces that provide a better user
+  experience on all devices.
+</p>
+
+<p>
+  I am continuously improving my web development skills by
+  working on creative projects and learning new frontend
+  technologies.
+</p>
+        
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <h2 class="title">My Services</h2>
+
+    <div class="box-container">
+
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>
+          Creating attractive and modern website layouts.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Responsive Design</h3>
+        <p>
+          Designing websites that work on all devices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <p>
+          Building user-friendly and clean web pages.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="skills" id="skills">
+
+    <h2 class="title">My Skills</h2>
+
+    <div class="box-container">
+
+      <div class="card">
+        <h3>HTML</h3>
+        <p>
+          Creating webpage structures using HTML5.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>CSS</h3>
+        <p>
+          Styling beautiful and responsive web pages.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Responsive Design</h3>
+        <p>
+          Making websites mobile friendly.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects" id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="box-container">
+
+      <div class="card">
+        <h3>Landing Page</h3>
+        <p>
+          Responsive landing page using HTML and CSS.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>
+          Personal portfolio website project.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="box-container">
+
+      <div class="card">
+        <h3>Email</h3>
+        <p>pavani@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h3>Phone</h3>
+        <p>+91 9876543210</p>
+      </div>
+
+      <div class="card">
+        <h3>Location</h3>
+        <p>India</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Pavani Landing Page | Designed using HTML & CSS
+    </p>
+
+  </footer>
+
+</body>
+</html>
